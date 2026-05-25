@@ -1,1 +1,14 @@
-
+feedparser
+httpx
+trafilatura
+transformers
+torch
+sentence-transformers
+spacy
+pandas
+streamlit
+plotly
+shap
+deep-translator
+tqdm
+lxml_html_clean
