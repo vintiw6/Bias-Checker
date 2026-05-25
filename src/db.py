@@ -84,6 +84,17 @@ def update_scores(article_id: str, emotion: float, clickbait: float, entity_json
 
 def get_all_scored() -> pd.DataFrame:
     """Retrieves all scored articles as a pandas DataFrame."""
+    csv_path = os.path.join("data", "scored_articles.csv")
+    if os.path.exists(csv_path):
+        try:
+            df = pd.read_csv(csv_path)
+            # Ensure entity_json handles NaNs and missing values gracefully
+            if "entity_json" in df.columns:
+                df["entity_json"] = df["entity_json"].fillna("{}")
+            return df
+        except Exception as e:
+            print(f"Warning: Failed to read scored_articles.csv: {e}. Falling back to SQLite database.")
+            
     conn = get_db_connection()
     df = pd.read_sql_query("""
         SELECT id, outlet, headline, url, body, published_at, scraped_at, lean, emotion, clickbait, entity_json

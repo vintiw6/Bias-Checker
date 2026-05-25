@@ -1,0 +1,13 @@
+streamlit
+pandas
+plotly
+feedparser
+trafilatura
+httpx
+beautifulsoup4
+spacy
+transformers
+sentence-transformers
+tqdm
+numpy
+googlenewsdecoder

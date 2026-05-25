@@ -15,9 +15,11 @@ def get_embedding_model():
         _embedding_model = SentenceTransformer("sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
     return _embedding_model
 
-def compute_outlet_profiles() -> pd.DataFrame:
+def compute_outlet_profiles(articles_df: pd.DataFrame = None) -> pd.DataFrame:
     """Computes aggregate profiles for all outlets based on scored articles."""
-    df = db.get_all_scored()
+    if articles_df is None:
+        articles_df = db.get_all_scored()
+    df = articles_df
     if df.empty:
         print("No scored articles found in the database. Cannot compute profiles.")
         return pd.DataFrame()
