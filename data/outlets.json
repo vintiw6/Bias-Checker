@@ -1,0 +1,11 @@
+{
+  "The Wire":       { "rss": "https://news.google.com/rss/search?q=site:thewire.in&hl=en-IN&gl=IN&ceid=IN:en", "lean": "left" },
+  "Newslaundry":    { "rss": "https://news.google.com/rss/search?q=site:newslaundry.com&hl=en-IN&gl=IN&ceid=IN:en", "lean": "left" },
+  "Scroll":         { "rss": "http://feeds.feedburner.com/ScrollinArticles", "lean": "left" },
+  "The Hindu":      { "rss": "https://www.thehindu.com/feeder/default.rss", "lean": "center-left" },
+  "Indian Express": { "rss": "https://indianexpress.com/feed/", "lean": "center" },
+  "The Print":      { "rss": "https://theprint.in/feed/", "lean": "center" },
+  "NDTV":           { "rss": "https://feeds.feedburner.com/ndtvnews-top-stories", "lean": "center" },
+  "Swarajya":       { "rss": "https://news.google.com/rss/search?q=site:swarajyamag.com&hl=en-IN&gl=IN&ceid=IN:en", "lean": "right" },
+  "OpIndia":        { "rss": "https://feeds.feedburner.com/opindia", "lean": "right" }
+}
